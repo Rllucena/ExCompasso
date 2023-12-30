@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 
 
-public class palindromas {
+public class Ex10 {
  
 
     public static boolean palindromasMutuas (String s1,String s2 ){
