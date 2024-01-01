@@ -1,5 +1,4 @@
-// 14.Implemente um programa que calcule a média ponderada de três
-// notas com pesos diferentes.
+// 14.Implemente um programa que calcule a média ponderada de três notas com pesos diferentes.
 
 import java.util.Scanner;
 
@@ -21,6 +20,6 @@ public class Ex14 {
 
         System.out.printf("Média ponderada final: %f", notaFinal);
 
-
+        sc.close();
     }
 }

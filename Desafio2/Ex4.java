@@ -1,5 +1,4 @@
-// 4. Implemente um programa que determine se uma string é um número
-// válido (inteiro ou decimal).
+// 4. Implemente um programa que determine se uma string é um número válido (inteiro ou decimal).
 
 import java.util.Scanner;
 
@@ -14,9 +13,9 @@ public class Ex4 {
         try {
             Double.parseDouble(strNum);
             System.out.println("É um número válido.");
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {//caso ocorra esta exceção ela é tratada com o seguinte print...
             System.out.println("Não é um número válido.");
         }
-
+        sc.close();
     }
 }
