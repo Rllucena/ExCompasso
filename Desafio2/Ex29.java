@@ -1,5 +1,4 @@
-// 29.Implemente um programa que calcule a média ponderada de uma
-// lista de números.
+// 29.Implemente um programa que calcule a média ponderada de uma lista de números.
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +10,7 @@ public class Ex29 {
 
         List<Double> listaNotas = new ArrayList<>();
         List<Double> listaPesos = new ArrayList<>();
-        Double dividendo=0.0, divisor =0.0, media;
+        Double dividendo=0.0, divisor=0.0, media;
 
         System.out.print("Quantas notas serão inseridas? ");
         int n = sc.nextInt();
@@ -24,7 +23,9 @@ public class Ex29 {
         }
 
         for (int i=0; i<listaNotas.size(); i++) {
+            //calcula o dividendo para o calculo da média (soma dos produtos das notas pelos seus respectivos pesos)
             dividendo += listaNotas.get(i) * listaPesos.get(i);
+            //calcula o divisor (soma dos pesos)
             divisor += listaPesos.get(i);
         }
 
