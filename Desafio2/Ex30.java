@@ -5,7 +5,7 @@ public class Ex30 {
     public static boolean estRomani(String numeroRomano) {
         // Verifica se a string contém apenas caracteres validos
         if (!numeroRomano.matches("[IVXLCDM]+")) {
-            System.out.println("Há caracteres que não fazem partes dos numerais romanos");
+            System.out.println("Há caracteres que não fazem parte dos numerais romanos");
             return false;
         }
 
@@ -21,9 +21,15 @@ public class Ex30 {
             }
         }
 
-        // Verifica se não há mais de tres caracter de subtração (por exemplo, 'IV')
-        if (numeroRomano.matches(".*[IXC]\\3.*")) {
-            return false;
+        // Verifica se não há mais de um caracter de subtração (por exemplo, 'IV')
+        if (numeroRomano.length()>2) {
+            for (int i = 0; i < numeroRomano.length() - 3; i++) {
+                char currentChar = numeroRomano.charAt(i);
+                if (currentChar == numeroRomano.charAt(i + 1) && currentChar == numeroRomano.charAt(i + 2) && currentChar == numeroRomano.charAt(i + 3)) {
+                    System.out.println("Há mais de 3 caracteres sequenciais");
+                    return false;
+            }
+            }
         }
 
 
@@ -33,7 +39,7 @@ public class Ex30 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-            System.out.println("Digite um numero romano: ");
+            System.out.println("Digite um numero romano menor que 4mil: ");
             String numeroRomano = in.nextLine().toUpperCase();
 
             if (estRomani(numeroRomano)) {
