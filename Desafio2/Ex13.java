@@ -7,27 +7,31 @@ package ex13;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Ex13 {
 
 	public static void main(String[] args) {
 		
-		List<Integer> lista = new ArrayList<>();
-		List<Integer> listaSequencial = new ArrayList<>();
+		List<Double> lista = new ArrayList<>();
+		List<Double> listaSequencial = new ArrayList<>();
 		
-		lista.add(2);
-		lista.add(5);
-		lista.add(5);
-		lista.add(7);
-		lista.add(6);
-		lista.add(8);
-		lista.add(3);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite a lista de números separados por espaço: ");
+		String s = sc.nextLine();
+		
+		String[] vetor = s.split(" ");
+		
+		for(int i = 0; i < vetor.length; i++) {
+			lista.add(Double.parseDouble(vetor[i]));
+		}
 		
 		//inicia a lista sequencial com o menor valor possível
-		listaSequencial.add(Integer.MIN_VALUE);
+		listaSequencial.add(Double.MIN_VALUE);
 		//percorre a lista de números
 		for(int i = 1; i < lista.size(); i++) {
-			//verifica se o número da posição atual é maior que o número na posição anterior e se ele é maior que o último número da lista com a sequencia.
+			//verifica se o número da posição atual é maior que o número na posição anterior e se ele é maior que o último número inserido na lista com a sequencia.
 			if(lista.get(i) > lista.get(i-1) && lista.get(i) > listaSequencial.get(listaSequencial.size() - 1)) {
 				listaSequencial.add(lista.get(i));
 				if(listaSequencial.size() == 2) {
@@ -37,10 +41,13 @@ public class Ex13 {
 				}
 			}
 		}
+		
 		System.out.println("Número da lista que formam uma sequência crescente: ");
-		for(int i : listaSequencial) {
+		for(double i : listaSequencial) {
 			System.out.println(i);
 		}
+		
+		sc.close();
+		
 	}
-
 }

@@ -6,29 +6,37 @@ package ex23;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Ex23 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-		List<Integer> lista = new ArrayList<>();
+		List<Double> lista = new ArrayList<>();
 		
-		lista.add(5);
-		lista.add(-5);
-		lista.add(-8);
-		lista.add(4);
-		lista.add(-2);
+		Scanner sc = new Scanner(System.in);
 		
-		int produto = 1;
+		System.out.print("Digite a lista de números separados por espaço: ");
+		String s = sc.nextLine();
 		
-		for(int i : lista) {
-			if(i < 0) {
-				produto *= i;
+		String[] vetor = s.split(" ");
+		
+		for(int i = 0; i < vetor.length; i++) {
+			lista.add(Double.parseDouble(vetor[i]));
+		}
+					
+		
+		double produto = 1;
+		
+		for(double d : lista) {
+			if(d < 0) {
+				produto *= d;
 			}
 		}
 		
 		System.out.println(produto);
+		
+		sc.close();
 	}
 
 }
