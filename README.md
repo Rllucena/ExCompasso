@@ -19,20 +19,20 @@ Turma Java Spring Boot</h1>
   <table>
     <tr>
       <td align="center">
-        <a href="https://github.com/aarrieche">
+        <a href="https://www.linkedin.com/in/aarrieche/">
           <img src="https://avatars.githubusercontent.com/u/104609542?v=4" width="100px;" alt="Foto Alexandre"/><br>
           <sub><b>Alexandre Arrieche</b></sub>
         </a>
       </td>
       <td align="center">
-        <a href="https://github.com/carolainemachado">
+        <a href="https://www.linkedin.com/in/carolaine-machado-a8395a161/">
           <img src="https://avatars.githubusercontent.com/u/115194896?v=4" width="100px;" alt="Foto Carolaine"/><br>
           <sub><b>Carolaine Machado</b></sub>
         </a>
       </td>
       <td align="center">
-        <a href="https://github.com/marcosgabreu">
-          <img src="https://avatars.githubusercontent.com/u/63922981?v=4" width="100px;" alt="Foto Marcos"/><br>
+        <a href="https://www.linkedin.com/in/marcos-abreu-725566206">
+          <img src="https://media.licdn.com/dms/image/D4D35AQGB-zfNHwRfeA/profile-framedphoto-shrink_800_800/0/1684368063437?e=1704823200&v=beta&t=7o8RhFgU0B_Jex-LsBaMzqsPPl54DHXAgUEOfp-gGA4" width="100px;" alt="Foto Marcos"/><br>
           <sub><b>Marcos Abreu</b></sub>
         </a>
       </td>
@@ -43,8 +43,8 @@ Turma Java Spring Boot</h1>
         </a>
       </td>
       <td align="center">
-        <a href="https://www.linkedin.com/in/rllucena/">
-          <img src="https://avatars.githubusercontent.com/u/129807139?v=4" width="100px;" alt="Foto Rafael"/><br>
+        <a href="https://www.linkedin.com/in/rafaelleivaslucena/">
+          <img src="https://media.licdn.com/dms/image/C4D03AQE-8-mPqwGpQQ/profile-displayphoto-shrink_800_800/0/1664217790841?e=1709769600&v=beta&t=d9JEAU3paEl3mgIkPDkEZ68ArEfwtFVhVca6SWJ2TBs" width="100px;" alt="Foto Rafael"/><br>
           <sub><b>Rafael Lucena</b></sub>
         </a>
       </td>
