@@ -24,7 +24,7 @@ public class Ex06 {
         // inverte a string
         invertidaStr = new StringBuilder(numeroStr).reverse().toString();
 
-
+        // compara a string invertida com a palavra selecionada e verifica se é um palindromo especial
         if (invertidaStr.equals(numeroStr)) {
             System.out.println("O numero " + numero + " é um palindromo especial");
         }

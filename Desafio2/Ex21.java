@@ -48,15 +48,18 @@ public class Ex21 {
             System.out.println("posicao " + i + ": " + lista.get(i) + " , Peso: " + pesos.get(i));
         }
 
-        // calculando a media harmonica ponderada
+        // percorrendo a lista e calculando as variaveis somaProduto e somaPesos
         for (int i = 0; i < lista.size(); i++) {
             somaProdutos += pesos.get(i) / lista.get(i);
             somaPesos += pesos.get(i);
         }
 
+        // calculando a media harmonica ponderada
         mediaHarmonicaPonderada = somaPesos / somaProdutos;
 
         System.out.println("Media harmonica ponderada: " + mediaHarmonicaPonderada);
+
+        scanner.close();
 
     }
 }

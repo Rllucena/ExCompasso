@@ -40,10 +40,11 @@ public class Ex11 {
             System.out.println("posicao " + i + ": " + lista.get(i));
         }
 
-        // contar anagramas
+        
         System.out.println("Digite a palavra de referencia: ");
         palavraReferencia = scanner.nextLine();
 
+        // contar anagramas
         for (String palavraLista : lista) {
             if(ehAnagrama(palavraReferencia, palavraLista)) {
                 contadorAnagramas ++;
@@ -56,6 +57,8 @@ public class Ex11 {
         scanner.close();
     }
 
+
+    // verifica se as duas palavras tem o mesmo tamanho e se possuem os mesmos caracteres
     private static boolean ehAnagrama (String palavra1, String palavra2) {
         if (palavra1.length() != palavra2.length()) {
             return false;
@@ -70,6 +73,8 @@ public class Ex11 {
         return true;
     }
 
+
+    // faz a contagem caractere por caractere
     private static int contagemCaracter(String palavra, char caracter ) {
         int contagem = 0;
         for (char c: palavra.toCharArray()) {
