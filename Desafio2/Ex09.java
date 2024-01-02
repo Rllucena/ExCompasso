@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class Ex9 {
+public class Ex09 {
     public static void main(String[] args) throws Exception {
 
         List<String> lista = new ArrayList<>();
