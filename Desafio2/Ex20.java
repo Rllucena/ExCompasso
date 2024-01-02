@@ -1,3 +1,5 @@
+//.Desenvolva um programa que determine se um número é um número de Kaprekar
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

@@ -1,3 +1,6 @@
+//Escreva um programa que conte o número de ocorrências de cada palavra em uma string.
+
+
 import java.util.Scanner;
 
 public class Ex05 {
@@ -46,7 +49,7 @@ public class Ex05 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Digite uma frase: ");
+        System.out.println("Digite uma frase com palavras separadas por espaços: ");
         String frase = in.nextLine();
 
         contarPalavras(frase);
