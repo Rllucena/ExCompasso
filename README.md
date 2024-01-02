@@ -37,8 +37,8 @@ Turma Java Spring Boot</h1>
         </a>
       </td>
       <td align="center">
-        <a href="https://www.linkedin.com/in/erickpeck/">
-          <img src="https://avatars.githubusercontent.com/u/129807139?v=4" width="100px;" alt="Foto Erick"/><br>
+        <a href="https://github.com/erickpeck">
+          <img src="https://avatars.githubusercontent.com/u/55333732?v=4" width="100px;" alt="Foto Erick"/><br>
           <sub><b>Erick Peck</b></sub>
         </a>
       </td>
