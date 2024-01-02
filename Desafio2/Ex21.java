@@ -15,11 +15,14 @@ public class Ex21 {
 
         int tamanhoLista;
         int numero;
-        double somaInversos = 0.0;
+        int peso;
+        double somaProdutos = 0.0;
+        double somaPesos = 0.0;
         double mediaHarmonicaPonderada = 0.0;
         
 
         List<Integer> lista = new ArrayList<>();
+        List<Integer> pesos = new ArrayList<>();
 
         System.out.println("Digite o tamanho da lista: ");
         tamanhoLista = scanner.nextInt();        
@@ -28,29 +31,32 @@ public class Ex21 {
         //para consumir o \n
         scanner.nextLine();
 
-        // montando a lista
+        // montando a lista e os pesos
         for (int i = 0; i < tamanhoLista; i++) {
             System.out.println("Digite o numero da posicao " + (i));
             numero = scanner.nextInt();
             lista.add(numero);
+
+            System.out.println("Digite o peso para o numero da posicao " + (i));
+            peso = scanner.nextInt();
+            pesos.add(peso);
         }
 
         // mostrando a lista
         System.out.println("Lista: ");
         for (int i = 0; i < lista.size(); i++) {
-            System.out.println("posicao " + i + ": " + lista.get(i));
+            System.out.println("posicao " + i + ": " + lista.get(i) + " , Peso: " + pesos.get(i));
         }
 
         // calculando a media harmonica ponderada
         for (int i = 0; i < lista.size(); i++) {
-            somaInversos += 1.0 / lista.get(i);
+            somaProdutos += pesos.get(i) / lista.get(i);
+            somaPesos += pesos.get(i);
         }
 
-        mediaHarmonicaPonderada = tamanhoLista / somaInversos;
+        mediaHarmonicaPonderada = somaPesos / somaProdutos;
 
         System.out.println("Media harmonica ponderada: " + mediaHarmonicaPonderada);
-
-
 
     }
 }
