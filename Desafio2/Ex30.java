@@ -58,12 +58,12 @@ public class Ex30 {
 
         // Verifica se a string está em ordem correta
         for (int i = 0; i < numeroRomano.length() - 1; i++) {
-            if (i == (numeroRomano.length() - 1)){
+            if (i == (numeroRomano.length() - 2)){
                 return true;
             }
 
             if (numeroRomano.charAt(i)=='M'){
-                if (numeroRomano.charAt(i+1)!='M'){
+                if (numeroRomano.charAt(i+1)!='M' && i>2){
                     if (numeroRomano.charAt(i+2)=='M' && numeroRomano.charAt(i+1)!='C'){
                         System.out.println("Fora de ordem M");
                         return false;
@@ -72,16 +72,12 @@ public class Ex30 {
                 }
             }
             if (numeroRomano.charAt(i)=='D'){
-                if (numeroRomano.charAt(i+1)!='D'){
-                    if (numeroRomano.charAt(i+2)=='D'){
-                        System.out.println("Fora de ordem D");
+                if (numeroRomano.charAt(i+1)=='D'||numeroRomano.charAt(i+1)=='M'){
                         return false;
-                    }
-                i++;
                 }
             }
             if (numeroRomano.charAt(i)=='C'){
-                if (numeroRomano.charAt(i+1)!='C'){
+                if (numeroRomano.charAt(i+1)!='C' && i>2){
                     if (numeroRomano.charAt(i+2)=='C'&& numeroRomano.charAt(i+1)!='X'){
                         System.out.println("Fora de ordem C");
                         return false;
@@ -90,12 +86,9 @@ public class Ex30 {
                 }
             }
             if (numeroRomano.charAt(i)=='L'){
-                if (numeroRomano.charAt(i+1)!='L'){
-                    if (numeroRomano.charAt(i+2)=='L'){
+                if (numeroRomano.charAt(i+1)=='L'||numeroRomano.charAt(i+1)=='M'||numeroRomano.charAt(i+1)=='D'||numeroRomano.charAt(i+1)=='C'){
                         System.out.println("Fora de ordem L");
                         return false;
-                    }
-                i++;
                 }
             }
             if (numeroRomano.charAt(i)=='X'){
@@ -108,16 +101,21 @@ public class Ex30 {
                 }
             }
             if (numeroRomano.charAt(i)=='V'){
-                if (numeroRomano.charAt(i+1)!='V'){
-                    if (numeroRomano.charAt(i+2)=='V'){
+                if (numeroRomano.charAt(i+1)=='V'||numeroRomano.charAt(i+1)=='L'||numeroRomano.charAt(i+1)=='M'||numeroRomano.charAt(i+1)=='D'||numeroRomano.charAt(i+1)=='C'){
                         System.out.println("Fora de ordem V");
                         return false;
-                    }
-                i++;
                 }
             }
             
         }
+
+        //caso especial de dois X a frente de um I
+        if(numeroRomano.length()>2){    
+            if (numeroRomano.charAt(numeroRomano.length()-3)=='I' && numeroRomano.charAt(numeroRomano.length()-2)=='X' && numeroRomano.charAt(numeroRomano.length()-1)=='X'){
+                System.out.println("Fora de ordem I");
+                return false;
+            }
+        }    
 
         return true;
 
