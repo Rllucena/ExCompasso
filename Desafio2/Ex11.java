@@ -7,6 +7,7 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 
+
 public class Ex11 {
     public static void main(String[] args) {
 
@@ -14,6 +15,8 @@ public class Ex11 {
 
         int tamanhoLista;
         String palavra;
+        String palavraReferencia;
+        int contadorAnagramas = 0;
 
         List<String> lista = new ArrayList<>();
 
@@ -37,6 +40,43 @@ public class Ex11 {
             System.out.println("posicao " + i + ": " + lista.get(i));
         }
 
+        // contar anagramas
+        System.out.println("Digite a palavra de referencia: ");
+        palavraReferencia = scanner.nextLine();
+
+        for (String palavraLista : lista) {
+            if(ehAnagrama(palavraReferencia, palavraLista)) {
+                contadorAnagramas ++;
+            }
+
+        }
+
+        System.out.println("Número total de anagramas de '" + palavraReferencia + "': " + contadorAnagramas);
+
         scanner.close();
+    }
+
+    private static boolean ehAnagrama (String palavra1, String palavra2) {
+        if (palavra1.length() != palavra2.length()) {
+            return false;
+        }
+
+        for (char c: palavra1.toCharArray()) {
+            if(contagemCaracter(palavra1, c) != contagemCaracter(palavra2, c)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private static int contagemCaracter(String palavra, char caracter ) {
+        int contagem = 0;
+        for (char c: palavra.toCharArray()) {
+            if (c == caracter) {
+                contagem++;
+            }
+        }
+        return contagem;
     }
 }
