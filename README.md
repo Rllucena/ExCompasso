@@ -32,7 +32,7 @@ Turma Java Spring Boot</h1>
       </td>
       <td align="center">
         <a href="https://www.linkedin.com/in/marcos-abreu-725566206">
-          <img src="https://media.licdn.com/dms/image/D4D35AQGB-zfNHwRfeA/profile-framedphoto-shrink_800_800/0/1684368063437?e=1704823200&v=beta&t=7o8RhFgU0B_Jex-LsBaMzqsPPl54DHXAgUEOfp-gGA4" width="100px;" alt="Foto Marcos"/><br>
+          <img src="https://avatars.githubusercontent.com/u/63922981?v=4" width="100px;" alt="Foto Marcos"/><br>
           <sub><b>Marcos Abreu</b></sub>
         </a>
       </td>
