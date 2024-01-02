@@ -21,19 +21,106 @@ public class Ex30 {
             }
         }
 
-        // Verifica se não há mais de um caracter de subtração (por exemplo, 'IV')
-        if (numeroRomano.length()>2) {
-            for (int i = 0; i < numeroRomano.length() - 3; i++) {
-                char currentChar = numeroRomano.charAt(i);
-                if (currentChar == numeroRomano.charAt(i + 1) && currentChar == numeroRomano.charAt(i + 2) && currentChar == numeroRomano.charAt(i + 3)) {
-                    System.out.println("Há mais de 3 caracteres sequenciais");
+        // Verifica se há II imediatamente antes de V ou X
+        for (int i = 0; i < numeroRomano.length() - 1; i++) {
+            if (numeroRomano.substring(i, i + 2).equals("II")) {
+                char nextChar = i + 2 < numeroRomano.length() ? numeroRomano.charAt(i + 2) : ' ';
+                if (nextChar == 'V' || nextChar == 'X') {
+                    System.out.println("Há II antes de V ou X");
                     return false;
-            }
+                }
             }
         }
 
+        // Verifica se não há XX antes de um L ou C
+        for (int i = 0; i < numeroRomano.length() - 1; i++) {
+            if (numeroRomano.substring(i, i + 2).equals("XX")) {
+                char nextChar = i + 2 < numeroRomano.length() ? numeroRomano.charAt(i + 2) : ' ';
+                if (nextChar == 'L' || nextChar == 'C') {
+                    System.out.println("Há XX antes de um L ou C");
+                    return false;
+                }
+            }
+        }
+
+        // Verifica se não há CC antes de um D ou M
+        for (int i = 0; i < numeroRomano.length() - 1; i++) {
+            if (numeroRomano.substring(i, i + 2).equals("CC")) {
+                char nextChar = i + 2 < numeroRomano.length() ? numeroRomano.charAt(i + 2) : ' ';
+                if (nextChar == 'D' || nextChar == 'M') {
+                    System.out.println("Há CC antes de um D ou M");
+                    return false;
+                }
+            }
+        }
+
+        // ordem correta dos caracteres romanos: MDCLXVI
+
+        // Verifica se a string está em ordem correta
+        for (int i = 0; i < numeroRomano.length() - 1; i++) {
+            if (i == (numeroRomano.length() - 1)){
+                return true;
+            }
+
+            if (numeroRomano.charAt(i)=='M'){
+                if (numeroRomano.charAt(i+1)!='M'){
+                    if (numeroRomano.charAt(i+2)=='M' && numeroRomano.charAt(i+1)!='C'){
+                        System.out.println("Fora de ordem M");
+                        return false;
+                    }
+                i++;
+                }
+            }
+            if (numeroRomano.charAt(i)=='D'){
+                if (numeroRomano.charAt(i+1)!='D'){
+                    if (numeroRomano.charAt(i+2)=='D'){
+                        System.out.println("Fora de ordem D");
+                        return false;
+                    }
+                i++;
+                }
+            }
+            if (numeroRomano.charAt(i)=='C'){
+                if (numeroRomano.charAt(i+1)!='C'){
+                    if (numeroRomano.charAt(i+2)=='C'&& numeroRomano.charAt(i+1)!='X'){
+                        System.out.println("Fora de ordem C");
+                        return false;
+                    }
+                i++;
+                }
+            }
+            if (numeroRomano.charAt(i)=='L'){
+                if (numeroRomano.charAt(i+1)!='L'){
+                    if (numeroRomano.charAt(i+2)=='L'){
+                        System.out.println("Fora de ordem L");
+                        return false;
+                    }
+                i++;
+                }
+            }
+            if (numeroRomano.charAt(i)=='X'){
+                if (numeroRomano.charAt(i+1)!='X'){
+                    if (numeroRomano.charAt(i+2)=='X' && numeroRomano.charAt(i+1)!='I'){
+                        System.out.println("Fora de ordem X");
+                        return false;
+                    }
+                i++;
+                }
+            }
+            if (numeroRomano.charAt(i)=='V'){
+                if (numeroRomano.charAt(i+1)!='V'){
+                    if (numeroRomano.charAt(i+2)=='V'){
+                        System.out.println("Fora de ordem V");
+                        return false;
+                    }
+                i++;
+                }
+            }
+            
+        }
 
         return true;
+
     }
 
     public static void main(String[] args) {

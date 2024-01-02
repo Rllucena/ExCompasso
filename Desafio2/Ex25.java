@@ -1,8 +1,6 @@
 //Escreva um programa que conte o número de elementos em comum entre dois vetores
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 
 public class Ex25 {
 
